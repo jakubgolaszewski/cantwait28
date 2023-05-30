@@ -69,8 +69,8 @@ class _HomePageBody extends StatelessWidget {
                     ),
                   ),
                   confirmDismiss: (direction) async {
-                    // only from right to left
-                    return direction == DismissDirection.endToStart;
+                    // only from left to right
+                    return direction == DismissDirection.startToEnd;
                   },
                   onDismissed: (direction) {
                     context.read<HomeCubit>().remove(documentID: doc.id);
